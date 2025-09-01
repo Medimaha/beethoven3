@@ -1,0 +1,12 @@
+#find_sum
+'''
+find_sum
+args:firstNum,secondNum
+returns sum of the Numbers
+'''
+
+def find_sum(firstNum,secondNum):
+    result=firstNum + secondNum
+    return result
+print(find_sum(10,20)) 
+  
