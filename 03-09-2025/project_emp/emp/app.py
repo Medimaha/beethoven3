@@ -15,8 +15,11 @@ print(total)
 '''
 
 from repo_pickle import create_employee, read_all
-create_employee(1001, 'Divya Kumar', 'Business Analyst', 38000, '20-Aug-2025')
-create_employee(1002, 'Gowtham', 'Data Analyst', 50000, '22-Aug-2025')
-create_employee(1003, 'Mohammed Mazha', 'Business Analyst', 40000, '12-Aug-2025')
+try:
+    create_employee(1001, 'Divya Kumar', 'Business Analyst', 38000, '20-Aug-2025')
+    create_employee(1002, 'Gowtham', 'Data Analyst', 50000, '22-Aug-2025')
+    create_employee(1003, 'Mohammed Mazha', 'Business Analyst', 40000, '12-Aug-2025')
+except Exception as ex:
 
+   print("Error from create employee",ex)
 print(read_all())

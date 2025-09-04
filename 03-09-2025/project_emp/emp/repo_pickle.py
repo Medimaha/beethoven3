@@ -2,6 +2,7 @@
 import logging 
 import pickle
 import os
+from app_errors import CreateEmployeeException
 
 logging.basicConfig(filename='app.log', 
         format='%(asctime)s %(levelname)s: %(message)s',
@@ -12,17 +13,23 @@ file_name = 'employee.dat'#dat means binary
 
 def load_from_file():
     if os.path.exists(file_name):
-        with open(file_name,'r')as reader:
+        try:
+          with open(file_name,'r')as reader:
            employees = pickle.load(reader)
+        except Exception as ex:
+           logging.error(ex)
+           employees=[]
     else:
         employees = []
     return employees
 
 def save_to_file(employees):
-    with open(file_name,'wb') as writer:
-        pickle.dump(employees, writer)
-    pass
-
+    try:
+        with open(file_name,'wb') as writer:
+           pickle.dump(employees, writer)
+    except Exception as ex:
+           logging.error(ex)
+           raise CreateEmployeeException("Error in Employee creation.")
 
 
 employees =load_from_file() #[]
