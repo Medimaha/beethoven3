@@ -1,0 +1,38 @@
+2025-09-08 14:19:21,835 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-08 14:19:21,835 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-08 14:19:21,837 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 14:19:22,250 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 14:19:22,252 - werkzeug - INFO -  * Debugger PIN: 120-877-123
+2025-09-08 14:19:27,974 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 14:19:27] "[35m[1mGET /books HTTP/1.1[0m" 500 -
+2025-09-08 14:21:19,468 - werkzeug - INFO -  * Detected change in 'C:\\Users\\memahala\\Downloads\\v7\\v6\\lms_app\\main_app.py', reloading
+2025-09-08 14:21:19,512 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 14:21:48,338 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-08 14:21:48,338 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-08 14:21:48,339 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 14:21:48,766 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 14:21:48,768 - werkzeug - INFO -  * Debugger PIN: 120-877-123
+2025-09-08 14:22:29,410 - werkzeug - INFO -  * Detected change in 'c:\\Users\\memahala\\Downloads\\v7\\v6\\lms_app\\main_app.py', reloading
+2025-09-08 14:22:29,454 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 14:22:29,874 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 14:22:29,876 - werkzeug - INFO -  * Debugger PIN: 120-877-123
+2025-09-08 14:22:38,046 - werkzeug - INFO -  * Detected change in 'c:\\Users\\memahala\\Downloads\\v7\\v6\\lms_app\\main_app.py', reloading
+2025-09-08 14:22:38,087 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 14:23:23,300 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-08 14:23:23,301 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-08 14:23:23,301 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 14:23:23,796 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 14:23:23,798 - werkzeug - INFO -  * Debugger PIN: 120-877-123
+2025-09-08 14:23:34,325 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 14:23:34] "GET /books HTTP/1.1" 200 -
+2025-09-08 14:23:52,267 - werkzeug - INFO -  * Detected change in 'c:\\Users\\memahala\\Downloads\\v7\\v6\\lms_app\\main_app.py', reloading
+2025-09-08 14:23:52,313 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 14:23:52,781 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 14:23:52,783 - werkzeug - INFO -  * Debugger PIN: 120-877-123
+2025-09-08 14:24:07,051 - werkzeug - INFO -  * Detected change in 'c:\\Users\\memahala\\Downloads\\v7\\v6\\lms_app\\main_app.py', reloading
+2025-09-08 14:24:07,089 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 14:24:26,289 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-08 14:24:26,290 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-08 14:24:26,291 - werkzeug - INFO -  * Restarting with stat

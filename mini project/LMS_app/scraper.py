@@ -6,9 +6,6 @@ import os
 # Base URL of the website
 base_url = 'https://books.toscrape.com/catalogue/page-{}.html'
 
-# Create directories if they don't exist
-# os.makedirs('./lms_app', exist_ok=True)  # Ensure the directory exists
-
 # List to store book details
 books = []
 
@@ -47,7 +44,7 @@ def scrape(pages):
     books = scrape_books(pages)  # Get the list of books
     print(len(books))
     # Save the data to a JSON file
-    with open("./app/scraped_books.json", 'w', encoding='utf-8') as json_file:
+    with open("./lms_app/scraped_books.json", 'w', encoding='utf-8') as json_file:
         json.dump(books, json_file, ensure_ascii=False, indent=4)
 
     print("Data saved to scraped_books.json")
@@ -69,24 +66,3 @@ def delete_json_file():
         print(f"Permission denied: unable to delete {file_path}.")
     except Exception as e:
         print(f"An error occurred: {e}")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

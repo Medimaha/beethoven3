@@ -8,8 +8,4 @@ class Book:
         self.copies = copies
     
     def __str__(self):
-        return f'[{self.id}, {self.title}, {self.price}, {self.copies}]'
-
-class Info:
-    def __init__(self, val=0):
-        self.val = val
+        return f'[Id : {self.id}, Title : {self.title}, Price : {self.price},Copies : {self.copies}]'

@@ -1,0 +1,28 @@
+2025-09-08 11:10:48,865 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-09-08 11:10:48,865 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-09-08 11:10:48,867 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 11:10:50,582 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 11:10:50,585 - werkzeug - INFO -  * Debugger PIN: 120-877-123
+2025-09-08 11:11:47,735 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:11:47] "[33mGET / HTTP/1.1[0m" 404 -
+2025-09-08 11:34:50,429 - werkzeug - INFO -  * Detected change in 'c:\\cisco-beethoven3\\beethoven3\\LMSProject\\client.py', reloading
+2025-09-08 11:34:50,485 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 11:34:52,323 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 11:34:52,325 - werkzeug - INFO -  * Debugger PIN: 120-877-123
+2025-09-08 11:35:01,508 - werkzeug - INFO -  * Detected change in 'c:\\cisco-beethoven3\\beethoven3\\LMSProject\\client.py', reloading
+2025-09-08 11:35:01,553 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 11:35:03,410 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 11:35:03,411 - werkzeug - INFO -  * Debugger PIN: 120-877-123
+2025-09-08 11:35:05,474 - werkzeug - INFO -  * Detected change in 'c:\\cisco-beethoven3\\beethoven3\\LMSProject\\client.py', reloading
+2025-09-08 11:35:05,519 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 11:35:07,185 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 11:35:07,187 - werkzeug - INFO -  * Debugger PIN: 120-877-123
+2025-09-08 11:36:18,343 - werkzeug - INFO -  * Detected change in 'c:\\cisco-beethoven3\\beethoven3\\LMSProject\\client.py', reloading
+2025-09-08 11:36:18,389 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 11:36:20,093 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 11:36:20,095 - werkzeug - INFO -  * Debugger PIN: 120-877-123
+2025-09-08 11:42:19,569 - werkzeug - INFO -  * Detected change in 'c:\\cisco-beethoven3\\beethoven3\\LMSProject\\client.py', reloading
+2025-09-08 11:42:19,611 - werkzeug - INFO -  * Restarting with stat
+2025-09-08 11:42:21,344 - werkzeug - WARNING -  * Debugger is active!
+2025-09-08 11:42:21,347 - werkzeug - INFO -  * Debugger PIN: 120-877-123
+2025-09-08 11:52:42,229 - werkzeug - INFO - 127.0.0.1 - - [08/Sep/2025 11:52:42] "[35m[1mGET /books HTTP/1.1[0m" 500 -
