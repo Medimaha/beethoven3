@@ -1,7 +1,7 @@
 # **FTP automation in Python**.
 
 Unlike SCP/SSH, FTP is an **older, plain-text protocol** (port 21) often used for file transfer in legacy systems.
-Python gives us tools to **connect, upload, download, list files, delete files, etc.**
+Python gives us tools to **connector, upload, download, list files, delete files, etc.**
 
 ---
 
@@ -16,10 +16,10 @@ from ftplib import FTP
 
 def ftp_automation(host, username, password, local_file, remote_file):
     try:
-        # Connect to FTP Server
+        # connector to FTP Server
         ftp = FTP(host)
         ftp.login(user=username, passwd=password)
-        print("Connected:", ftp.getwelcome())
+        print("connectored:", ftp.getwelcome())
 
         # Upload file
         with open(local_file, "rb") as f:
@@ -35,7 +35,7 @@ def ftp_automation(host, username, password, local_file, remote_file):
             ftp.retrbinary(f"RETR {remote_file}", f.write)
         print(f"Downloaded {remote_file} → downloaded_copy.txt")
 
-        # Close connection
+        # Close connectorion
         ftp.quit()
         return True
 
@@ -71,8 +71,8 @@ def ftps_automation(host, username, password):
     try:
         ftps = FTP_TLS(host)
         ftps.login(user=username, passwd=password)
-        ftps.prot_p()  # Secure data connection
-        print("Connected securely:", ftps.getwelcome())
+        ftps.prot_p()  # Secure data connectorion
+        print("connectored securely:", ftps.getwelcome())
 
         print("Files on server:")
         ftps.retrlines("LIST")

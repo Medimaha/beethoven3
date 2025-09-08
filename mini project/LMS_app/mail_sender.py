@@ -13,7 +13,7 @@ def send_gmail(to_address, subject, body):
         msg["Subject"] = subject
         msg.attach(MIMEText(body, "plain"))
 
-        # Connect to Gmail's SMTP server
+        # connector to Gmail's SMTP server
         server = smtplib.SMTP("smtp.gmail.com", 587)
         server.starttls()
         server.login(from_address, app_password)

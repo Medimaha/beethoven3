@@ -1,9 +1,9 @@
 import threading
 from queue import Queue
-import repo
+import repository
 import logging
 
-class StockCalculator:
+class BookCal:
     def __init__(self):
         self.queue = Queue()
         self.total_value = 0
@@ -19,7 +19,7 @@ class StockCalculator:
 
     def calculate_total_stock_value(self):
         try:
-            books = repo.readAllBooks()
+            books = repository.readAllBooks()
             batch_size = 10
             threads = []
 

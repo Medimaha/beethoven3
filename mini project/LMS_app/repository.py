@@ -1,11 +1,11 @@
 import sqlite3
-from model import Book
+from LMS_model import Book
 import logging
 from concurrent.futures import ThreadPoolExecutor
 from typing import List
 
-def connect():
-    con = sqlite3.connect('lms_app_db.db')
+def connector():
+    con = sqlite3.connect('app_db.db')
     return con
 
 def libraryTablesCreate():
@@ -17,7 +17,7 @@ def libraryTablesCreate():
     )"""
 
     try:
-        with connect() as con:
+        with connector() as con:
             con.execute(sql)
             print("Library table created or already exists.")
     except Exception as e:
@@ -29,7 +29,7 @@ def create_new_book(book):
     params = (book.title, book.price, book.copies)
 
     try:
-        with connect() as con:
+        with connector() as con:
             cur = con.cursor()
             cur.execute(sql, params)
             id = cur.lastrowid
@@ -42,7 +42,7 @@ def create_new_book(book):
 def read_all():
     sql = """SELECT * FROM library"""
     params = tuple()
-    con = connect()
+    con = connector()
     cur = con.cursor()
     response = cur.execute(sql,params)
     result = response.fetchall() 
@@ -59,7 +59,7 @@ def update_book_by_id(book):
     params = (book.title, book.price, book.copies, book.id,)
 
     try:
-        with connect() as con:  # Automatically closes the connection
+        with connector() as con:  # Automatically closes the connectorion
             cur = con.cursor()
             cur.execute(sql, params)
             con.commit()
@@ -73,7 +73,7 @@ def delete_book_by_id(book_id):
     sql = """DELETE FROM library WHERE id = ?"""
 
     try:
-        with connect() as con:  # Automatically closes the connection
+        with connector() as con:  # Automatically closes the connectorion
             cur = con.cursor()
             cur.execute(sql, (book_id,))
             con.commit()
@@ -86,7 +86,7 @@ def delete_book_by_id(book_id):
 def read_book_id(id):
     sql = """SELECT * FROM library WHERE (id=?)"""
     params = (id,)
-    con = connect()
+    con = connector()
     cur = con.cursor()
     response = cur.execute(sql,params)
     result = response.fetchone() #row=[id,title,...]

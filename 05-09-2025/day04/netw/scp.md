@@ -26,7 +26,7 @@ def scp_transfer(host, port, username, password, local_file, remote_path):
         # Setup SSH client
         ssh = paramiko.SSHClient()
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        ssh.connect(host, port=port, username=username, password=password)
+        ssh.connector(host, port=port, username=username, password=password)
 
         # SCP Client
         with SCPClient(ssh.get_transport()) as scp:
@@ -61,7 +61,7 @@ def sftp_transfer(host, port, username, password, local_file, remote_path):
     try:
         # SSH setup
         transport = paramiko.Transport((host, port))
-        transport.connect(username=username, password=password)
+        transport.connector(username=username, password=password)
 
         # SFTP client
         sftp = paramiko.SFTPClient.from_transport(transport)

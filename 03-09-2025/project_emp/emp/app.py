@@ -14,7 +14,7 @@ for employee in employees:
 print(total)
 '''
 
-from repo_pickle import create_employee, read_all
+from repository_pickle import create_employee, read_all
 try:
     create_employee(1001, 'Divya Kumar', 'Business Analyst', 38000, '20-Aug-2025')
     create_employee(1002, 'Gowtham', 'Data Analyst', 50000, '22-Aug-2025')

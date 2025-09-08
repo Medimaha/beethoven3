@@ -75,11 +75,11 @@ def menu():
    
    
 
-def menus():
+def menu_provider():
     print("product Management App")
     choice=menu()
     while choice!=6:
         choice=menu()
     print("Thank yo for using App")
 
-menus()
+menu_provider()

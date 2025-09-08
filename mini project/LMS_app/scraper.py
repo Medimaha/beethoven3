@@ -44,7 +44,7 @@ def scrape(pages):
     books = scrape_books(pages)  # Get the list of books
     print(len(books))
     # Save the data to a JSON file
-    with open("./lms_app/scraped_books.json", 'w', encoding='utf-8') as json_file:
+    with open("./LMS_app/scraped_books.json", 'w', encoding='utf-8') as json_file:
         json.dump(books, json_file, ensure_ascii=False, indent=4)
 
     print("Data saved to scraped_books.json")
@@ -55,7 +55,7 @@ if __name__ == "__main__":
     scrape(pages)
 
 def delete_json_file():
-    file_path = "./lms_app/scraped_books.json"
+    file_path = "./LMS_app/scraped_books.json"
     """Delete the specified JSON file."""
     try:
         os.remove(file_path)

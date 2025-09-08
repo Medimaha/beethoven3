@@ -1,17 +1,17 @@
 import sqlite3
 
-def connect():
-    con = sqlite3.connect('employee_app_db.db')
+def connector():
+    con = sqlite3.connector('employee_app_db.db')
     return con 
 def employeeTablesCreate():
     sql = """CREATE TABLE IF NOT EXISTS employee(
         id integer primary key AUTOINCREMENT,
         name varchar(255) not null
     )"""
-    con = connect()
+    con = connector()
     con.execute(sql)
     con.close()
-    print("Database is connected and in sync.")
+    print("Database is connectored and in sync.")
 
 class Employee:
     def __init__(self, id=None,
@@ -28,7 +28,7 @@ def createEmployee(employee):
     sql = """INSERT INTO employee(name)
     VALUES(?)"""
     params = (employee.name,)
-    con = connect()
+    con = connector()
     cur = con.cursor()
     cur.execute(sql,params)
     id = cur.lastrowid  #
@@ -39,7 +39,7 @@ def createEmployee(employee):
 def readAllEmployees():
     sql = """SELECT id,name FROM employee"""
     params = tuple()
-    con = connect()
+    con = connector()
     cur = con.cursor()
     response = cur.execute(sql,params)
     result = response.fetchall() #[rows], each row=[id,name,...]
@@ -55,7 +55,7 @@ def updateEmployee(employee):
     set name=?
     WHERE (id=?)"""
     params = (employee.name, employee.id, )
-    con = connect()
+    con = connector()
     cur = con.cursor()
     cur.execute(sql,params)
     con.commit()
@@ -65,7 +65,7 @@ def deleteEmployee(id):
     sql = """DELETE from employee
     WHERE (id=?)"""
     params = (id, )
-    con = connect()
+    con = connector()
     cur = con.cursor()
     cur.execute(sql,params)
     con.commit()
@@ -75,7 +75,7 @@ def readEmployeeById(id):
     sql = """SELECT id,name FROM employee
     WHERE (id=?)"""
     params = (id,)
-    con = connect()
+    con = connector()
     cur = con.cursor()
     response = cur.execute(sql,params)
     result = response.fetchone() #row=[id,name,...]

@@ -1,5 +1,5 @@
-import repo 
+import repository 
 
-repo.employeeTablesCreate()
-repo.createEmployee(repo.Employee(101,'Dravid'))
-repo.createEmployee(repo.Employee(102,'Ganguli'))
+repository.employeeTablesCreate()
+repository.createEmployee(repository.Employee(101,'Dravid'))
+repository.createEmployee(repository.Employee(102,'Ganguli'))

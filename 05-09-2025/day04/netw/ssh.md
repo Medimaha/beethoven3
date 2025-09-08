@@ -2,7 +2,7 @@
 
 ### 1. **Paramiko (Most Common)**
 
-[Paramiko](http://www.paramiko.org/) is a Python library for SSH connections.
+[Paramiko](http://www.paramiko.org/) is a Python library for SSH connectorions.
 
 #### Example: Run Commands via SSH
 
@@ -15,8 +15,8 @@ def ssh_command(host, port, username, password, command):
         client = paramiko.SSHClient()
         client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
-        # Connect
-        client.connect(host, port=port, username=username, password=password)
+        # connector
+        client.connector(host, port=port, username=username, password=password)
 
         # Run command
         stdin, stdout, stderr = client.exec_command(command)
@@ -49,7 +49,7 @@ def ssh_with_key(host, username, key_file, command):
         client = paramiko.SSHClient()
         client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
-        client.connect(host, username=username, pkey=key)
+        client.connector(host, username=username, pkey=key)
 
         stdin, stdout, stderr = client.exec_command(command)
         output = stdout.read().decode()
@@ -71,7 +71,7 @@ print(ssh_with_key("192.168.1.10", "ubuntu", "/home/user/.ssh/id_rsa", "uname -a
 [Netmiko](https://github.com/ktbyers/netmiko) is built on Paramiko and optimized for routers/switches.
 
 ```python
-from netmiko import ConnectHandler
+from netmiko import connectorHandler
 
 device = {
     "device_type": "cisco_ios",
@@ -81,10 +81,10 @@ device = {
     "port": 22
 }
 
-connection = ConnectHandler(**device)
-output = connection.send_command("show running-config")
+connectorion = connectorHandler(**device)
+output = connectorion.send_command("show running-config")
 print(output)
-connection.disconnect()
+connectorion.disconnector()
 ```
 
 ---
@@ -94,9 +94,9 @@ connection.disconnect()
 [Fabric](https://www.fabfile.org/) builds on Paramiko and is used for running commands on **multiple servers at once**.
 
 ```python
-from fabric import Connection
+from fabric import connectorion
 
-c = Connection(host="192.168.1.10", user="ubuntu", connect_kwargs={"password": "password123"})
+c = connectorion(host="192.168.1.10", user="ubuntu", connector_kwargs={"password": "password123"})
 result = c.run("df -h", hide=True)
 print(result.stdout.strip())
 ```

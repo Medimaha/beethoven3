@@ -1,5 +1,5 @@
 import unittest
-from emp.repo import create_employee, read_all
+from emp.repository import create_employee, read_all
 
 class CreateEmployeeTest(unittest.TestCase):
     def test_div_create(self):

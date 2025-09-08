@@ -41,7 +41,7 @@ def menu():
     return choice
    
 
-def menus():
+def menu_provider():
     print("Salary Management App")
     choice=menu()
     while choice!=6:
@@ -49,4 +49,4 @@ def menus():
     print("Thank yo for using App")
 
 
-menus()
+menu_provider()

@@ -17,7 +17,7 @@ import telnetlib
 
 def telnet_automation(host, port, username, password, command):
     try:
-        # Open connection
+        # Open connectorion
         tn = telnetlib.Telnet(host, port, timeout=10)
 
         # Login
@@ -83,12 +83,12 @@ print(telnet_with_pexpect("192.168.1.1", "admin", "password123", "ls -l"))
 ### 3. **Third-Party Libraries for Network Automation**
 
 * **Netmiko** (built on top of `paramiko`, mainly for network devices, usually SSH but supports Telnet too).
-* **Exscript** (scriptable network connections, supports Telnet/SSH).
+* **Exscript** (scriptable network connectorions, supports Telnet/SSH).
 
 Example with **Netmiko**:
 
 ```python
-from netmiko import ConnectHandler
+from netmiko import connectorHandler
 
 device = {
     "device_type": "cisco_ios_telnet",
@@ -98,10 +98,10 @@ device = {
     "port": 23
 }
 
-connection = ConnectHandler(**device)
-output = connection.send_command("show ip interface brief")
+connectorion = connectorHandler(**device)
+output = connectorion.send_command("show ip interface brief")
 print(output)
-connection.disconnect()
+connectorion.disconnector()
 ```
 
 ---

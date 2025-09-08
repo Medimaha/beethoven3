@@ -1,5 +1,5 @@
 #id,name,description,category,stock,tags,price
-#data  science-->form some model of data 
+#data  science-->form some LMS_model of data 
 #data analyst --> the given job will be given by 
 #data enginner-->all the insidents will be used by enginner
 #product enginner-->
